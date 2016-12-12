@@ -3,7 +3,7 @@ from . models import Book
 
 
 def index(request):
-    return render(request, 'template.html')
+    return render(request, 'index.html')
 
 
 def store(request):
