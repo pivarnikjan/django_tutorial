@@ -135,3 +135,5 @@ fabric.properties
 
 # SQLite Databases
 db.sqlite3
+
+.idea/
