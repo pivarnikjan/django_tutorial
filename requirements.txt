@@ -1,6 +1,8 @@
 Django==1.8
+django-appconf==1.0.2
 django-bootstrap-themes==3.1.2
 django-bootstrap3==5.4.0
+django-compressor==1.5
 django-registration-redux==1.1
 oauthlib==2.0.1
 PyJWT==1.4.2

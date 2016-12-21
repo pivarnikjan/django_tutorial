@@ -137,3 +137,4 @@ fabric.properties
 db.sqlite3
 
 .idea/
+.static_cdn/
