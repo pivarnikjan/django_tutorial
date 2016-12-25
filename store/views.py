@@ -2,6 +2,7 @@ import logging
 import random
 import string
 
+from django.contrib.gis.geoip import GeoIP
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.mail import EmailMultiAlternatives
 from django.core.urlresolvers import reverse
@@ -71,6 +72,10 @@ def book_details(request, book_id):
                 form = ReviewForm()
                 context['form'] = form
     context['reviews'] = book.review_set.all()
+    geo_info = GeoIP().city(request.META.get('REMOTE_ADDR'))
+    if not geo_info:
+        geo_info = GeoIP().city("46.150.193.23")
+        context['geo_info'] = geo_info
     return render(request, 'store/detail.html', context)
 
 

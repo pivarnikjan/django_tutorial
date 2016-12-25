@@ -11,10 +11,11 @@
         <link href="{% static 'base/css/style.css' %}" rel="stylesheet" type="text/css">
     {% endcompress %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	 <script src="https://checkout.stripe.com/checkout.js"></script>
-	 {% compress js %}
-	 <script src="{% static 'base/js/jquery.cookie.js' %}"></script>
-	 {% endcompress %}
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    {% compress js %}
+        <script src="{% static 'base/js/jquery.cookie.js' %}"></script>
+    {% endcompress %}
 {% endblock bootstrap3_extra_head %}
 
 {% block bootstrap3_title %}

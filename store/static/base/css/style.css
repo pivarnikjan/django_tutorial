@@ -309,6 +309,11 @@ img.bg {
     display: block;
     font-weight: bold;
 }
+.detail_book_reviews_map {
+    width: 50px;
+    height: 300px;
+    margin: 20px auto;
+}
 
 /* Cart Styles */
 .cart_container {

@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'social.apps.django_app.default',
     'registration',
     'bootstrap3',
@@ -145,3 +146,5 @@ AUTHENTICATION_BACKENDS = (
 # Social Auth - Facebook
 SOCIAL_AUTH_FACEBOOK_KEY = '235802866853678'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'ab60376b92fa89b11cc56c0ed3c15a7b'
+
+GEOIP_PATH = 'geo/'
