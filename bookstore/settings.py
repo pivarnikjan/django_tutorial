@@ -15,7 +15,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '%(h4&6_jd&(k=%0wxm%s+9=$zc&-mk*lt2d(#l)(24*^puuk2$'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -85,7 +83,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bookstore.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
@@ -95,7 +92,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -109,7 +105,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
@@ -151,3 +146,33 @@ SOCIAL_AUTH_FACEBOOK_KEY = '235802866853678'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'ab60376b92fa89b11cc56c0ed3c15a7b'
 
 GEOIP_PATH = 'geo/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'basic': {
+            'format': '%(asctime)s %(name)-20s %(levelname)-8s %(module)s | %(message)s'
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'basic',
+            'maxBytes': 10000,
+            'backupCount': 10,
+            'filename': os.path.join(BASE_DIR, 'mystery_books.log'),
+        }
+    },
+    'loggers': {
+        'store': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+        },
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+        }
+    }
+}
