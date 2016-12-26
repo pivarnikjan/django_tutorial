@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'compressor',
     'paypalrestsdk',
     'stripe',
+    'tastypie',
     'store',
 )
 

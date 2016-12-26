@@ -137,5 +137,6 @@ fabric.properties
 db.sqlite3
 
 .idea/
-.static_cdn/
-.media_cdn/
+static_cdn/
+media_cdn/
+geo/
